@@ -19,6 +19,7 @@ body {
 button {
     font-family: inherit;
     border: none;
+    cursor: pointer;
 }
 
 .main-container {
