@@ -13,7 +13,7 @@ class Header extends Component {
             <header>
                 <div className="app-title">
                     <Link to="/">
-                        <div>THE RANGE</div>
+                        <div style={{ color: this.props.color }}>THE RANGE</div>
                     </Link>
                 </div>
                 <ul>
