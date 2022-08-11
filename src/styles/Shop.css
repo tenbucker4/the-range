@@ -1,0 +1,51 @@
+:root {
+    --shop-background: #f8f5f2;
+}
+
+.shop-container h1,
+.shop-container h2,
+.shop-container h3,
+.shop-container h4,
+.shop-container h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--shop-background);
+    color: black;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.shop-wrapper {
+    padding-top: 14rem;
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.shop-nav {
+    width: 25%;
+}
+
+.shop-nav ul {
+    line-height: 2.5rem;
+}
+
+.shop-nav ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.shop-nav ul li:hover {
+    text-decoration: underline 1.5px solid black;
+}
+
+.shop-products {
+    width: 75%;
+}
