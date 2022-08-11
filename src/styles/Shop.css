@@ -16,7 +16,6 @@
     justify-content: center;
     min-height: 100vh;
     background-color: var(--shop-background);
-    color: black;
     position: absolute;
     top: 0;
     width: 100%;
@@ -25,6 +24,7 @@
 .shop-wrapper {
     padding-top: 14rem;
     display: flex;
+    color: black;
     align-items: flex-start;
     width: 80%;
 }

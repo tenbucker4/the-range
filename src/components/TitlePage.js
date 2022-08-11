@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import "../styles/TitlePage.css";
+import { Link } from "react-router-dom";
 
-const TitlePage = () => {
-    return (
-        <div className="title-div">
-            <h1>Welcome to The Range</h1>
-            <h3>The top destination for premium golf equipment</h3>
-            <a href="/shop">
-                <button>ENTER</button>
-            </a>
-        </div>
-    );
-};
+class TitlePage extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="title-div">
+                <h1>Welcome to The Range</h1>
+                <h3>The top destination for premium golf equipment</h3>
+                <Link to="/shop">
+                    <button type="button">ENTER</button>
+                </Link>
+            </div>
+        );
+    }
+}
 
 export default TitlePage;
 

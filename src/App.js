@@ -11,6 +11,7 @@ class App extends Component {
         super(props);
 
         this.state = {
+            headerColor: "white",
             displayCart: false,
             cart: [],
             totalPrice: 0,
@@ -19,11 +20,21 @@ class App extends Component {
         };
     }
 
+    toggleHeaderColor = (e) => {
+        e.preventDefault();
+
+        if (this.state.headerColor == "white") {
+            this.setState({ headerColor: "black" });
+        }
+
+        console.log(this.state.headerColor);
+    };
+
     render() {
         return (
             <div className="home-page">
-                <Header />
                 <BrowserRouter>
+                    <Header changeColor={this.toggleHeaderColor} />
                     <Routes>
                         <Route exact path="/" element={<TitlePage />} />
                         <Route path="/shop" element={<Shop />} />

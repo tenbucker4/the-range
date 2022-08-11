@@ -6,7 +6,6 @@
 
 .home-page header {
     display: flex;
-    color: green;
     position: relative;
     z-index: 5;
 }
