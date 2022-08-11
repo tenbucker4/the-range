@@ -1,0 +1,28 @@
+.home-page header {
+    display: flex;
+}
+
+.home-page header .app-title {
+    display: flex;
+    align-items: center;
+    letter-spacing: 4px;
+    padding-left: 8rem;
+    padding-top: 6rem;
+    font-size: 1.2rem;
+}
+
+.home-page header ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 6rem;
+    padding-top: 6rem;
+    padding-right: 8rem;
+    margin-left: auto;
+}
+
+header ul li img {
+    width: 2rem;
+    height: auto;
+    cursor: pointer;
+}

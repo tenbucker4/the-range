@@ -1,0 +1,15 @@
+.title-div {
+    color: white;
+    padding-top: 10rem;
+    padding-left: 9rem;
+}
+
+.title-div h3,
+.title-div h1 {
+    font-weight: 200;
+}
+
+.title-div button {
+    background-color: white;
+    padding: 0.75rem 2rem;
+}

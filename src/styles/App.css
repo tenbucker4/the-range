@@ -1,0 +1,30 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url(../images/will-porada-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    font-family: inherit;
+    border: none;
+}
+
+.main-container {
+    min-height: 100vh;
+}
+
+header {
+    color: white;
+}
