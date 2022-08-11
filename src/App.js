@@ -3,6 +3,7 @@ import React, { Component, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import TitlePage from "./components/TitlePage";
+import Shop from "./components/Shop";
 import "./styles/Header.css";
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
                 <BrowserRouter>
                     <Routes>
                         <Route exact path="/" element={<TitlePage />} />
+                        <Route path="/shop" element={<Shop />} />
                     </Routes>
                 </BrowserRouter>
             </div>

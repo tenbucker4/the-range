@@ -6,7 +6,9 @@ const TitlePage = () => {
         <div className="title-div">
             <h1>Welcome to The Range</h1>
             <h3>The top destination for premium golf equipment</h3>
-            <button>ENTER</button>
+            <button>
+                <a href="/shop">ENTER</a>
+            </button>
         </div>
     );
 };
