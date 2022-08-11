@@ -12,3 +12,5 @@ const TitlePage = () => {
 };
 
 export default TitlePage;
+
+// Photo by Will Porada (https://unsplash.com/@will0629) on Unsplash
