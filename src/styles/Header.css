@@ -29,8 +29,8 @@
     margin-left: auto;
 }
 
-header ul li img {
-    width: 2rem;
+header ul li svg {
+    width: 1.5rem;
     height: auto;
     cursor: pointer;
 }

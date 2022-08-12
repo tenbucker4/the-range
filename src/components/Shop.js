@@ -13,10 +13,14 @@ class Shop extends Component {
 
     componentDidMount() {
         document.querySelector(".app-title").style.color = "black";
+        document.getElementById("search-icon").style.fill = "black";
+        document.getElementById("cart-icon").style.fill = "black";
     }
 
     componentWillUnmount() {
         document.querySelector(".app-title").style.color = "white";
+        document.getElementById("search-icon").style.fill = "white";
+        document.getElementById("cart-icon").style.fill = "white";
     }
 
     render() {
