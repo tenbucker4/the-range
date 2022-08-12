@@ -6,6 +6,10 @@ import "../images/grid.png";
 class Header extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            theme: "dark",
+        };
     }
 
     render() {
@@ -13,7 +17,7 @@ class Header extends Component {
             <header>
                 <div className="app-title">
                     <Link to="/">
-                        <div style={{ color: this.props.color }}>THE RANGE</div>
+                        <div onClick={this.props.changeColor}>THE RANGE</div>
                     </Link>
                 </div>
                 <ul>
@@ -37,36 +41,5 @@ class Header extends Component {
         );
     }
 }
-
-// const Header = (props) => {
-//     const { displayShop } = props;
-
-//     return (
-//         <header>
-//             <div className="app-title">
-//                 <a href="/" style={{ color: this.props.headerColor }}>
-//                     THE RANGE
-//                 </a>
-//             </div>
-//             <ul>
-//                 <li>
-//                     <a href="/shop">
-//                         <img src={require("../images/grid.png")} />
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a href="/search">
-//                         <img src={require("../images/search.png")} />
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a href="/cart">
-//                         <img src={require("../images/cart.png")} />
-//                     </a>
-//                 </li>
-//             </ul>
-//         </header>
-//     );
-// };
 
 export default Header;

@@ -20,31 +20,15 @@ class App extends Component {
         };
     }
 
-    toggleHeaderColor = () => {
-        if (this.state.headerColor == "white") {
-            this.setState({ headerColor: "black" });
-        } else {
-            this.setState({ headerColor: "white" });
-        }
-
-        console.log(this.state.headerColor);
-    };
+    changeTitleColor = () => {};
 
     render() {
         return (
             <div className="home-page">
                 <BrowserRouter>
-                    <Header color={this.state.headerColor} />
+                    <Header />
                     <Routes>
-                        <Route
-                            exact
-                            path="/"
-                            element={
-                                <TitlePage
-                                    changeColor={this.toggleHeaderColor}
-                                />
-                            }
-                        />
+                        <Route exact path="/" element={<TitlePage />} />
                         <Route path="/shop" element={<Shop />} />
                     </Routes>
                 </BrowserRouter>
