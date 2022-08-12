@@ -40,7 +40,30 @@ class Shop extends Component {
                             <li>Gloves</li>
                         </ul>
                     </div>
-                    <div className="shop-products">Products</div>
+                    <div className="shop-products">
+                        <div className="product">
+                            <div className="product-box">
+                                <img
+                                    src={require("../images/taylormade-driver-1.png")}
+                                ></img>
+                            </div>
+                            <div className="product-description">
+                                <h3>TaylorMade Stealth Driver</h3>
+                                <p>C$749.99</p>
+                            </div>
+                        </div>
+                        <div className="product">
+                            <div className="product-box">
+                                <img
+                                    src={require("../images/taylormade-driver-2.png")}
+                                ></img>
+                            </div>
+                            <div className="product-description">
+                                <h3>TaylorMade M2 Driver</h3>
+                                <p>C$399.99</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
