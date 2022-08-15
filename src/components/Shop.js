@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import allProducts from "../products/allProducts";
+import categories from "../products/categories";
 import "../styles/Shop.css";
 import "../styles/App.css";
 
@@ -28,13 +29,11 @@ class Shop extends Component {
                         <h5>SHOP //</h5>
                         <h2>All Products</h2>
                         <ul>
-                            <li>All</li>
-                            <li>Drivers / Woods</li>
-                            <li>Irons</li>
-                            <li>Wedges</li>
-                            <li>Putters</li>
-                            <li>Balls</li>
-                            <li>Gloves</li>
+                            {categories?.map((category) => {
+                                return (
+                                    <li key={category.id}>{category.name}</li>
+                                );
+                            })}
                         </ul>
                     </div>
                     <div className="shop-products">

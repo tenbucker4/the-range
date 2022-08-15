@@ -20,8 +20,6 @@ class App extends Component {
         };
     }
 
-    changeTitleColor = () => {};
-
     render() {
         return (
             <div className="home-page">
@@ -38,8 +36,3 @@ class App extends Component {
 }
 
 export default App;
-
-// IDEAS:
-
-// Use useEffect to make changes (add a state for shop display: true/false and change icon colors following a change in that state property)
-// Layout cart hide/display before adding functionality
