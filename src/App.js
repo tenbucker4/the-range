@@ -1,4 +1,5 @@
 import "./styles/App.css";
+import RouteSwitch from "./RouteSwitch";
 import React, { Component, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -21,17 +22,7 @@ class App extends Component {
     }
 
     render() {
-        return (
-            <div className="home-page">
-                <BrowserRouter>
-                    <Header />
-                    <Routes>
-                        <Route exact path="/" element={<TitlePage />} />
-                        <Route path="/shop" element={<Shop />} />
-                    </Routes>
-                </BrowserRouter>
-            </div>
-        );
+        return <div className="home-page"></div>;
     }
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import allProducts from "../products/allProducts";
 import categories from "../products/categories";
 import "../styles/Shop.css";
@@ -6,6 +7,7 @@ import "../styles/App.css";
 
 const Shop = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
+    // const category = categories.find((category) => category.id === categoryId);
 
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";

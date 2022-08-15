@@ -4,13 +4,13 @@
     z-index: 1;
 }
 
-.home-page header {
+header {
     display: flex;
     position: relative;
     z-index: 5;
 }
 
-.home-page header .app-title {
+header .app-title {
     display: flex;
     align-items: center;
     letter-spacing: 4px;
@@ -19,7 +19,7 @@
     font-size: 1.2rem;
 }
 
-.home-page header ul {
+header ul {
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -36,17 +36,17 @@ header ul li svg {
 }
 
 @media (max-width: 750px) {
-    .home-page header {
+    header {
         flex-direction: column;
     }
 
-    .home-page header .app-title {
+    header .app-title {
         padding-left: 0;
         padding-bottom: 4rem;
         justify-content: center;
     }
 
-    .home-page header ul {
+    header ul {
         padding-right: 0;
         padding-top: 0;
         justify-content: center;

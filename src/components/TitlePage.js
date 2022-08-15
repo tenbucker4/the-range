@@ -12,7 +12,7 @@ class TitlePage extends Component {
             <div className="title-div">
                 <h1>Welcome to The Range</h1>
                 <h3>The top destination for premium golf equipment</h3>
-                <Link to="/shop">
+                <Link to="/shop/catalog">
                     <button type="button" onClick={this.props.changeColor}>
                         ENTER
                     </button>
