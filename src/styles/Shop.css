@@ -84,3 +84,7 @@
 .product-description {
     padding-top: 1rem;
 }
+
+.product-description p {
+    padding-top: 0.5rem;
+}

@@ -1,14 +1,11 @@
 import React, { Component, useState } from "react";
+import allProducts from "../products/allProducts";
 import "../styles/Shop.css";
 import "../styles/App.css";
 
 class Shop extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            theme: "dark",
-        };
     }
 
     componentDidMount() {
@@ -41,116 +38,21 @@ class Shop extends Component {
                         </ul>
                     </div>
                     <div className="shop-products">
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/taylormade-driver-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>TaylorMade Stealth Driver</h3>
-                                <p>C$749.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/taylormade-driver-2.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>TaylorMade M2 Driver</h3>
-                                <p>C$399.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/taylormade-wood-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>TaylorMade SIM2 Wood</h3>
-                                <p>C$319.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/callaway-irons-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Callaway Apex Iron Set</h3>
-                                <p>C$1959.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/titleist-irons.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Titleist T100S Iron Set</h3>
-                                <p>C$1749.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/callaway-wedges-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Callaway JAWS RAW Wedge</h3>
-                                <p>C$229.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/callaway-balls.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Callaway Chrome Soft X Balls</h3>
-                                <p>C$63.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/titleist-balls-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Titleist Pro V1x Balls</h3>
-                                <p>C$64.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/glove-1.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Callaway Tour Authentic Glove</h3>
-                                <p>C$27.99</p>
-                            </div>
-                        </div>
-                        <div className="product">
-                            <div className="product-box">
-                                <img
-                                    src={require("../images/nike-glove.png")}
-                                ></img>
-                            </div>
-                            <div className="product-description">
-                                <h3>Nike Dura Feel IX Glove</h3>
-                                <p>C$15.99</p>
-                            </div>
-                        </div>
+                        {allProducts?.map((item, i) => {
+                            return (
+                                <div key={i} className="product">
+                                    <div className="product-box">
+                                        <img
+                                            src={require(`../images/${item.image}`)}
+                                        ></img>
+                                    </div>
+                                    <div className="product-description">
+                                        <h3>{item.name}</h3>
+                                        <p>{`C$${item.price}`}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

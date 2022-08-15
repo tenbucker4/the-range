@@ -5,7 +5,7 @@ const gloves = [
         id: "callaway-tour-authentic-glove",
         name: "Callaway Tour Authentic Glove",
         price: 27.99,
-        image: "../images/glove-1.png",
+        image: "glove-1.png",
     },
     {
         category: "Gloves",
@@ -13,7 +13,7 @@ const gloves = [
         id: "nike-dura-feel-ix-glove",
         name: "Nike Dura Feel IX Glove",
         price: 15.99,
-        image: "../images/nike-glove.png",
+        image: "nike-glove.png",
     },
 ];
 
