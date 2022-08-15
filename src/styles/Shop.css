@@ -71,8 +71,9 @@
 }
 
 .product-box:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
+    transform: scale(1.01);
+    transition: 0.2s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .product-box img {
