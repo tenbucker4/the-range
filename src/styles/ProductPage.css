@@ -67,7 +67,7 @@
     padding: 0.75rem 2rem;
     background-color: var(--shop-background);
     border: 1px solid black;
-    transition: 0.4s;
+    transition: 0.25s;
 }
 
 .add-to-cart-bin button:hover {
