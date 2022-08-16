@@ -13,7 +13,7 @@ const woods = [
         id: "taylormade-m2-driver",
         name: "TaylorMade M2 Driver",
         price: 399.99,
-        image: "taylormade-driver-2.png",
+        image: "taylormade-m2-driver.png",
     },
     {
         category: "Drivers / Woods",
