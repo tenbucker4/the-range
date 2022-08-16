@@ -30,7 +30,7 @@ const RouteSwitch = () => {
                     }
                 />
                 <Route
-                    path="/shop/catalog/:productid"
+                    path="/shop/catalog/:productId"
                     element={
                         <>
                             <Header />
