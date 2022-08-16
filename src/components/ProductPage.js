@@ -6,8 +6,20 @@ import "../styles/ProductPage.css";
 
 const ProductPage = (props) => {
     const { productId } = useParams();
-    const [count, setCount] = useState([1]);
+    const [count, setCount] = useState(["1"]);
     const product = allProducts.find((product) => product.id === productId);
+
+    const countUp = () => {
+        setCount(parseInt(count) + parseInt(1));
+    };
+
+    const countDown = () => {
+        if (count == 1) {
+            return;
+        } else {
+            setCount(count - 1);
+        }
+    };
 
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
@@ -34,11 +46,17 @@ const ProductPage = (props) => {
                     <img src={require(`../images/${product.image}`)}></img>
                 </div>
                 <div className="add-to-cart-bin">
-                    <div>C${product.price}</div>
+                    <div className="price">C${product.price}</div>
                     <div className="quantity-bin">
-                        <img src={require("../images/minus.png")}></img>
+                        <img
+                            src={require("../images/minus.png")}
+                            onClick={countDown}
+                        ></img>
                         <div className="quantity-counter">{count}</div>
-                        <img src={require("../images/plus.png")}></img>
+                        <img
+                            src={require("../images/plus.png")}
+                            onClick={countUp}
+                        ></img>
                     </div>
                     <button>ADD TO CART</button>
                 </div>
