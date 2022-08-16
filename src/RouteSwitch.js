@@ -3,6 +3,7 @@ import App from "./App";
 import TitlePage from "./components/TitlePage";
 import Shop from "./components/Shop";
 import Header from "./components/Header";
+import ProductPage from "./components/ProductPage";
 
 const RouteSwitch = () => {
     return (
@@ -25,6 +26,15 @@ const RouteSwitch = () => {
                         <>
                             <Header />
                             <Shop />
+                        </>
+                    }
+                />
+                <Route
+                    path="/shop/catalog/:productid"
+                    element={
+                        <>
+                            <Header />
+                            <ProductPage />
                         </>
                     }
                 />

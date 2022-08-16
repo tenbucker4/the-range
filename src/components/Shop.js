@@ -5,9 +5,10 @@ import categories from "../products/categories";
 import "../styles/Shop.css";
 import "../styles/App.css";
 
-const Shop = () => {
+const Shop = (props) => {
     const [filteredProducts, setFilteredProducts] = useState([]);
-    // const category = categories.find((category) => category.id === categoryId);
+    const { categoryId } = useParams();
+    const category = categories.find((category) => category.id === categoryId);
 
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
@@ -36,17 +37,24 @@ const Shop = () => {
                 <div className="shop-products">
                     {allProducts?.map((item, i) => {
                         return (
-                            <div key={i} className="product">
-                                <div className="product-box">
-                                    <img
-                                        src={require(`../images/${item.image}`)}
-                                    ></img>
+                            <Link
+                                className="product"
+                                key={item.id}
+                                to={`/shop/catalog/${item.id}`}
+                                productid={item.id}
+                            >
+                                <div>
+                                    <div className="product-box">
+                                        <img
+                                            src={require(`../images/${item.image}`)}
+                                        ></img>
+                                    </div>
+                                    <div className="product-description">
+                                        <h3>{item.name}</h3>
+                                        <p>{`C$${item.price}`}</p>
+                                    </div>
                                 </div>
-                                <div className="product-description">
-                                    <h3>{item.name}</h3>
-                                    <p>{`C$${item.price}`}</p>
-                                </div>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>
