@@ -5,7 +5,7 @@ import categories from "../products/categories";
 import "../styles/Cart.css";
 import RouteSwitch from "../RouteSwitch";
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, cart }) => {
     function hideCart() {
         document.querySelector(".cart").style.display = "none";
     }
@@ -20,22 +20,35 @@ const Cart = ({ cartItems }) => {
                     src={require("../images/close.png")}
                 ></img>
                 <h2 className="cart-title">Your Shopping Cart</h2>
-                <div className="cart-item">
-                    <div className="cart-item-image">
-                        <img
-                            src={require("../images/taylormade-driver-1.png")}
-                        ></img>
-                    </div>
-                    <div className="cart-item-details">
-                        <div className="cart-item-name">{cartItems}</div>
-                        <div className="cart-item-price">C$749.99</div>
-                        <div className="cart-quantity-bin">
-                            <img src={require("../images/minus.png")}></img>
-                            <div className="cart-quantity-counter">1</div>
-                            <img src={require("../images/plus.png")}></img>
+                {cart.map((item, i) => {
+                    return (
+                        <div key={i} className="cart-item">
+                            <div className="cart-item-image">
+                                <img
+                                    src={require(`../images/${item.image}`)}
+                                ></img>
+                            </div>
+                            <div className="cart-item-details">
+                                <div className="cart-item-name">
+                                    {item.name}
+                                </div>
+                                <div className="cart-item-price">{`C$${item.price}`}</div>
+                                <div className="cart-quantity-bin">
+                                    <img
+                                        src={require("../images/minus.png")}
+                                    ></img>
+                                    <div className="cart-quantity-counter">
+                                        {item.quantity}
+                                    </div>
+                                    <img
+                                        src={require("../images/plus.png")}
+                                    ></img>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    );
+                })}
+
                 <button>Checkout</button>
             </div>
         </div>

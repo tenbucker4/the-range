@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import ProductPage from "./components/ProductPage";
 import Cart from "./components/Cart";
 import { Component, useState } from "react";
+import uniqid from "uniqid";
 
 class RouteSwitch extends Component {
     constructor(props) {
@@ -13,7 +14,15 @@ class RouteSwitch extends Component {
 
         this.state = {
             displayCart: false,
-            cart: [],
+            cart: [
+                {
+                    name: "TaylorMade Stealth Driver",
+                    image: "taylormade-driver-1.png",
+                    price: 749.99,
+                    quantity: 1,
+                    id: uniqid(),
+                },
+            ],
             totalPrice: 0,
             displaySearch: false,
             searchFor: "",
@@ -32,7 +41,7 @@ class RouteSwitch extends Component {
                                 <App />
                                 <Header />
                                 <TitlePage />
-                                <Cart />
+                                <Cart cart={this.state.cart} />
                             </>
                         }
                     />
@@ -61,47 +70,5 @@ class RouteSwitch extends Component {
         );
     }
 }
-
-// const RouteSwitch = () => {
-
-//     return (
-//         <BrowserRouter>
-//             <Routes>
-//                 <Route
-//                     exact
-//                     path="/"
-//                     element={
-//                         <>
-//                             <App />
-//                             <Header />
-//                             <TitlePage />
-//                             <Cart cartItems={cart} />
-//                         </>
-//                     }
-//                 />
-//                 <Route
-//                     path="/shop/catalog"
-//                     element={
-//                         <>
-//                             <Header />
-//                             <Shop />
-//                             <Cart />
-//                         </>
-//                     }
-//                 />
-//                 <Route
-//                     path="/shop/catalog/:productId"
-//                     element={
-//                         <>
-//                             <Header />
-//                             <ProductPage />
-//                             <Cart />
-//                         </>
-//                     }
-//                 />
-//             </Routes>
-//         </BrowserRouter>
-//     );
-// };
 
 export default RouteSwitch;
