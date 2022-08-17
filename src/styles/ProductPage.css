@@ -30,17 +30,20 @@
 }
 
 .product-page-box {
-    width: 60%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-page-box img {
-    width: 95%;
+    width: 85%;
     max-width: 600px;
     height: auto;
 }
 
 .add-to-cart-bin {
-    width: 20%;
+    width: 30%;
     padding-top: 8rem;
     display: flex;
     flex-direction: column;
