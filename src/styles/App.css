@@ -34,6 +34,7 @@ a {
 
 #root {
     height: 100%;
+    position: relative;
 }
 
 button {

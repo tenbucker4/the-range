@@ -4,6 +4,7 @@ import TitlePage from "./components/TitlePage";
 import Shop from "./components/Shop";
 import Header from "./components/Header";
 import ProductPage from "./components/ProductPage";
+import Cart from "./components/Cart";
 
 const RouteSwitch = () => {
     return (
@@ -17,6 +18,7 @@ const RouteSwitch = () => {
                             <App />
                             <Header />
                             <TitlePage />
+                            <Cart />
                         </>
                     }
                 />
@@ -26,6 +28,7 @@ const RouteSwitch = () => {
                         <>
                             <Header />
                             <Shop />
+                            <Cart />
                         </>
                     }
                 />
@@ -35,6 +38,7 @@ const RouteSwitch = () => {
                         <>
                             <Header />
                             <ProductPage />
+                            <Cart />
                         </>
                     }
                 />
