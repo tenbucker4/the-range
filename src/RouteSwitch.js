@@ -36,20 +36,8 @@ class RouteSwitch extends Component {
                 },
             ],
         }));
-        // this.setState((prevState) => ({
-        //     ...prevState,
-        //     cart: [
-        //         ...prevState.cart,
-        //         {
-        //             name: name,
-        //             image: image,
-        //             price: price,
-        //             quantity: quantity,
-        //             id: id,
-        //         },
-        //     ],
-        // }));
-        console.log(this.state.cart);
+
+        document.querySelector(".cart").style.display = "flex";
     };
 
     render() {
