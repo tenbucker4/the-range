@@ -68,7 +68,7 @@ const ProductPage = ({ addItemToCart }) => {
                                 product.name,
                                 product.image,
                                 product.price,
-                                product.quantity
+                                count
                             )
                         }
                     >
