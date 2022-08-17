@@ -3,8 +3,9 @@ import { Link, Route, Routes, useParams } from "react-router-dom";
 import allProducts from "../products/allProducts";
 import categories from "../products/categories";
 import "../styles/Cart.css";
+import RouteSwitch from "../RouteSwitch";
 
-const Cart = (props) => {
+const Cart = ({ cartItems }) => {
     function hideCart() {
         document.querySelector(".cart").style.display = "none";
     }
@@ -26,9 +27,7 @@ const Cart = (props) => {
                         ></img>
                     </div>
                     <div className="cart-item-details">
-                        <div className="cart-item-name">
-                            TaylorMade Stealth Driver
-                        </div>
+                        <div className="cart-item-name">{cartItems}</div>
                         <div className="cart-item-price">C$749.99</div>
                         <div className="cart-quantity-bin">
                             <img src={require("../images/minus.png")}></img>

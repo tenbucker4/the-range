@@ -10,7 +10,7 @@
     z-index: 9;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0%;
 }
 
 .cart-container {
@@ -28,6 +28,7 @@
     justify-content: flex-start;
     padding-top: 5rem;
     padding-bottom: 2rem;
+    overflow-y: scroll;
 }
 
 .close-cart {
@@ -36,7 +37,7 @@
     height: auto;
     top: 1rem;
     right: 1rem;
-    position: fixed;
+    position: absolute;
 }
 
 .cart-item {
@@ -52,7 +53,7 @@
 .cart-item-image img {
     width: 100%;
     height: auto;
-    background-color: var(--shop-background);
+    background-color: rgb(224, 224, 224);
 }
 
 .cart-item-details {

@@ -35,6 +35,7 @@ const ProductPage = (props) => {
 
     return (
         <div className="product-page-container">
+            {console.log(product)}
             <div className="product-page-wrapper">
                 <div className="product-page-description">
                     <Link to="/shop/catalog">

@@ -10,15 +10,6 @@ import "./styles/Header.css";
 class App extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            headerColor: "white",
-            displayCart: false,
-            cart: [],
-            totalPrice: 0,
-            displaySearch: false,
-            searchFor: "",
-        };
     }
 
     render() {
