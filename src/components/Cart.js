@@ -20,7 +20,7 @@ const Cart = ({ cartItems, cart }) => {
                     src={require("../images/close.png")}
                 ></img>
                 <h2 className="cart-title">Your Shopping Cart</h2>
-                {cart.map((item, i) => {
+                {cart?.map((item, i) => {
                     return (
                         <div key={i} className="cart-item">
                             <div className="cart-item-image">

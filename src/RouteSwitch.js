@@ -14,20 +14,43 @@ class RouteSwitch extends Component {
 
         this.state = {
             displayCart: false,
-            cart: [
-                {
-                    name: "TaylorMade Stealth Driver",
-                    image: "taylormade-driver-1.png",
-                    price: 749.99,
-                    quantity: 1,
-                    id: uniqid(),
-                },
-            ],
+            cart: [],
             totalPrice: 0,
             displaySearch: false,
             searchFor: "",
         };
     }
+
+    addItemToCart = (name, image, price, quantity) => {
+        const id = uniqid();
+        this.setState((prevState) => ({
+            ...prevState,
+            cart: [
+                ...prevState.cart,
+                {
+                    name: name,
+                    image: image,
+                    price: price,
+                    quantity: quantity,
+                    id: id,
+                },
+            ],
+        }));
+        // this.setState((prevState) => ({
+        //     ...prevState,
+        //     cart: [
+        //         ...prevState.cart,
+        //         {
+        //             name: name,
+        //             image: image,
+        //             price: price,
+        //             quantity: quantity,
+        //             id: id,
+        //         },
+        //     ],
+        // }));
+        console.log(this.state.cart);
+    };
 
     render() {
         return (
@@ -51,7 +74,7 @@ class RouteSwitch extends Component {
                             <>
                                 <Header />
                                 <Shop />
-                                <Cart />
+                                <Cart cart={this.state.cart} />
                             </>
                         }
                     />
@@ -60,8 +83,11 @@ class RouteSwitch extends Component {
                         element={
                             <>
                                 <Header />
-                                <ProductPage />
-                                <Cart />
+                                <ProductPage
+                                    cart={this.state.cart}
+                                    addItemToCart={this.addItemToCart}
+                                />
+                                <Cart cart={this.state.cart} />
                             </>
                         }
                     />
