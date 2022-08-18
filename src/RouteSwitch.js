@@ -74,19 +74,28 @@ class RouteSwitch extends Component {
         await this.calculateTotalPrice();
     };
 
-    decreaseCartQuantity = async (i) => {
-        await this.setState(({ cart }) => ({
-            cart: [
-                ...cart.slice(0, i),
-                {
-                    ...cart[i],
-                    quantity:
-                        parseInt(this.state.cart[i].quantity) - parseInt(1),
-                },
-                ...cart.slice(i + 1),
-            ],
-        }));
-        await this.calculateTotalPrice();
+    decreaseCartQuantity = async (i, itemQuantity, itemId) => {
+        if (itemQuantity == 1) {
+            await this.setState({
+                cart: this.state.cart.filter(function (item) {
+                    return item.id !== itemId;
+                }),
+            });
+            await this.calculateTotalPrice();
+        } else {
+            await this.setState(({ cart }) => ({
+                cart: [
+                    ...cart.slice(0, i),
+                    {
+                        ...cart[i],
+                        quantity:
+                            parseInt(this.state.cart[i].quantity) - parseInt(1),
+                    },
+                    ...cart.slice(i + 1),
+                ],
+            }));
+            await this.calculateTotalPrice();
+        }
     };
 
     render() {

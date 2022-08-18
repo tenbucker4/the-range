@@ -40,7 +40,11 @@ const Cart = ({
                                         <img
                                             src={require("../images/minus.png")}
                                             onClick={() =>
-                                                decreaseCartQuantity(i)
+                                                decreaseCartQuantity(
+                                                    i,
+                                                    item.quantity,
+                                                    item.id
+                                                )
                                             }
                                         ></img>
                                         <div className="cart-quantity-counter">
