@@ -5,7 +5,7 @@ import categories from "../products/categories";
 import "../styles/Cart.css";
 import RouteSwitch from "../RouteSwitch";
 
-const Cart = ({ cartItems, cart }) => {
+const Cart = ({ cartItems, cart, total }) => {
     function hideCart() {
         document.querySelector(".cart").style.display = "none";
     }
@@ -20,34 +20,37 @@ const Cart = ({ cartItems, cart }) => {
                     src={require("../images/close.png")}
                 ></img>
                 <h2 className="cart-title">Your Shopping Cart</h2>
-                {cart?.map((item, i) => {
-                    return (
-                        <div key={i} className="cart-item">
-                            <div className="cart-item-image">
-                                <img
-                                    src={require(`../images/${item.image}`)}
-                                ></img>
-                            </div>
-                            <div className="cart-item-details">
-                                <div className="cart-item-name">
-                                    {item.name}
-                                </div>
-                                <div className="cart-item-price">{`C$${item.price}`}</div>
-                                <div className="cart-quantity-bin">
+                {cart.length > 0 &&
+                    cart?.map((item, i) => {
+                        return (
+                            <div key={i} className="cart-item">
+                                <div className="cart-item-image">
                                     <img
-                                        src={require("../images/minus.png")}
+                                        src={require(`../images/${item.image}`)}
                                     ></img>
-                                    <div className="cart-quantity-counter">
-                                        {item.quantity}
+                                </div>
+                                <div className="cart-item-details">
+                                    <div className="cart-item-name">
+                                        {item.name}
                                     </div>
-                                    <img
-                                        src={require("../images/plus.png")}
-                                    ></img>
+                                    <div className="cart-item-price">{`C$${item.price}`}</div>
+                                    <div className="cart-quantity-bin">
+                                        <img
+                                            src={require("../images/minus.png")}
+                                        ></img>
+                                        <div className="cart-quantity-counter">
+                                            {item.quantity}
+                                        </div>
+                                        <img
+                                            src={require("../images/plus.png")}
+                                        ></img>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                {cart.length == 0 && <p>Your cart is empty</p>}
+                <div className="total">{`Subtotal: C$${total}`}</div>
 
                 <button>Checkout</button>
             </div>

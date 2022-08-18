@@ -9,6 +9,7 @@ class Header extends Component {
 
     showCart = () => {
         document.querySelector(".cart").style.display = "flex";
+        this.props.calculateTotalPrice();
     };
 
     render() {

@@ -15,7 +15,7 @@ class RouteSwitch extends Component {
         this.state = {
             displayCart: false,
             cart: [],
-            totalPrice: 0,
+            total: 0,
             displaySearch: false,
             searchFor: "",
         };
@@ -38,6 +38,16 @@ class RouteSwitch extends Component {
         }));
 
         document.querySelector(".cart").style.display = "flex";
+        this.calculateTotalPrice();
+    };
+
+    calculateTotalPrice = () => {
+        let totalPrice = 0;
+        this.state.cart.forEach((item) => {
+            const subtotal = item.price * item.quantity;
+            totalPrice += subtotal;
+        });
+        this.setState({ total: totalPrice.toFixed(2) });
     };
 
     render() {
@@ -50,9 +60,16 @@ class RouteSwitch extends Component {
                         element={
                             <>
                                 <App />
-                                <Header />
+                                <Header
+                                    calculateTotalPrice={
+                                        this.calculateTotalPrice
+                                    }
+                                />
                                 <TitlePage />
-                                <Cart cart={this.state.cart} />
+                                <Cart
+                                    cart={this.state.cart}
+                                    total={this.state.total}
+                                />
                             </>
                         }
                     />
@@ -60,9 +77,16 @@ class RouteSwitch extends Component {
                         path="/shop/catalog"
                         element={
                             <>
-                                <Header />
+                                <Header
+                                    calculateTotalPrice={
+                                        this.calculateTotalPrice
+                                    }
+                                />
                                 <Shop />
-                                <Cart cart={this.state.cart} />
+                                <Cart
+                                    cart={this.state.cart}
+                                    total={this.state.total}
+                                />
                             </>
                         }
                     />
@@ -70,12 +94,19 @@ class RouteSwitch extends Component {
                         path="/shop/catalog/:productId"
                         element={
                             <>
-                                <Header />
+                                <Header
+                                    calculateTotalPrice={
+                                        this.calculateTotalPrice
+                                    }
+                                />
                                 <ProductPage
                                     cart={this.state.cart}
                                     addItemToCart={this.addItemToCart}
                                 />
-                                <Cart cart={this.state.cart} />
+                                <Cart
+                                    cart={this.state.cart}
+                                    total={this.state.total}
+                                />
                             </>
                         }
                     />

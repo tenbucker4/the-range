@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import allProducts from "../products/allProducts";
 import categories from "../products/categories";
 import "../styles/Shop.css";
