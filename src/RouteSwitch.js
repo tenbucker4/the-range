@@ -21,9 +21,9 @@ class RouteSwitch extends Component {
         };
     }
 
-    addItemToCart = (name, image, price, quantity) => {
+    addItemToCart = async (name, image, price, quantity) => {
         const id = uniqid();
-        this.setState((prevState) => ({
+        await this.setState((prevState) => ({
             ...prevState,
             cart: [
                 ...prevState.cart,
@@ -37,8 +37,8 @@ class RouteSwitch extends Component {
             ],
         }));
 
-        document.querySelector(".cart").style.display = "flex";
         this.calculateTotalPrice();
+        document.querySelector(".cart").style.display = "flex";
     };
 
     calculateTotalPrice = () => {
