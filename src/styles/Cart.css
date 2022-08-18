@@ -47,11 +47,13 @@
 }
 
 .cart-item-image {
-    width: 45%;
+    width: 55%;
+    max-width: 130px;
 }
 
 .cart-item-image img {
     width: 100%;
+    max-width: 110px;
     height: auto;
     background-color: rgb(224, 224, 224);
 }

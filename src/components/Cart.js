@@ -5,10 +5,12 @@ import categories from "../products/categories";
 import "../styles/Cart.css";
 import RouteSwitch from "../RouteSwitch";
 
-const Cart = ({ cartItems, cart, total }) => {
+const Cart = ({ cartItems, cart, total, addCartQuantity }) => {
     function hideCart() {
         document.querySelector(".cart").style.display = "none";
     }
+
+    function decreaseQuantity() {}
 
     return (
         <div className="cart">
@@ -42,6 +44,7 @@ const Cart = ({ cartItems, cart, total }) => {
                                             {item.quantity}
                                         </div>
                                         <img
+                                            onClick={() => addCartQuantity(i)}
                                             src={require("../images/plus.png")}
                                         ></img>
                                     </div>

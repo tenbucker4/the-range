@@ -41,13 +41,28 @@ class RouteSwitch extends Component {
         document.querySelector(".cart").style.display = "flex";
     };
 
-    calculateTotalPrice = () => {
+    calculateTotalPrice = async () => {
         let totalPrice = 0;
-        this.state.cart.forEach((item) => {
+        await this.state.cart.forEach((item) => {
             const subtotal = item.price * item.quantity;
             totalPrice += subtotal;
         });
-        this.setState({ total: totalPrice.toFixed(2) });
+        await this.setState({ total: totalPrice.toFixed(2) });
+    };
+
+    addCartQuantity = async (i) => {
+        await this.setState(({ cart }) => ({
+            cart: [
+                ...cart.slice(0, i),
+                {
+                    ...cart[i],
+                    quantity:
+                        parseInt(this.state.cart[i].quantity) + parseInt(1),
+                },
+                ...cart.slice(i + 1),
+            ],
+        }));
+        await this.calculateTotalPrice();
     };
 
     render() {
@@ -69,6 +84,7 @@ class RouteSwitch extends Component {
                                 <Cart
                                     cart={this.state.cart}
                                     total={this.state.total}
+                                    addCartQuantity={this.addCartQuantity}
                                 />
                             </>
                         }
@@ -86,6 +102,7 @@ class RouteSwitch extends Component {
                                 <Cart
                                     cart={this.state.cart}
                                     total={this.state.total}
+                                    addCartQuantity={this.addCartQuantity}
                                 />
                             </>
                         }
@@ -106,6 +123,7 @@ class RouteSwitch extends Component {
                                 <Cart
                                     cart={this.state.cart}
                                     total={this.state.total}
+                                    addCartQuantity={this.addCartQuantity}
                                 />
                             </>
                         }
