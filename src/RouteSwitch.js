@@ -21,6 +21,15 @@ class RouteSwitch extends Component {
         };
     }
 
+    showCart = () => {
+        document.querySelector(".cart").style.display = "flex";
+        this.calculateTotalPrice();
+    };
+
+    hideCart = () => {
+        document.querySelector(".cart").style.display = "none";
+    };
+
     addItemToCart = async (name, image, price, quantity) => {
         const id = uniqid();
         await this.setState((prevState) => ({
@@ -65,6 +74,21 @@ class RouteSwitch extends Component {
         await this.calculateTotalPrice();
     };
 
+    decreaseCartQuantity = async (i) => {
+        await this.setState(({ cart }) => ({
+            cart: [
+                ...cart.slice(0, i),
+                {
+                    ...cart[i],
+                    quantity:
+                        parseInt(this.state.cart[i].quantity) - parseInt(1),
+                },
+                ...cart.slice(i + 1),
+            ],
+        }));
+        await this.calculateTotalPrice();
+    };
+
     render() {
         return (
             <BrowserRouter>
@@ -79,12 +103,17 @@ class RouteSwitch extends Component {
                                     calculateTotalPrice={
                                         this.calculateTotalPrice
                                     }
+                                    showCart={this.showCart}
                                 />
                                 <TitlePage />
                                 <Cart
                                     cart={this.state.cart}
                                     total={this.state.total}
                                     addCartQuantity={this.addCartQuantity}
+                                    decreaseCartQuantity={
+                                        this.decreaseCartQuantity
+                                    }
+                                    hideCart={this.hideCart}
                                 />
                             </>
                         }
@@ -97,12 +126,17 @@ class RouteSwitch extends Component {
                                     calculateTotalPrice={
                                         this.calculateTotalPrice
                                     }
+                                    showCart={this.showCart}
                                 />
                                 <Shop />
                                 <Cart
                                     cart={this.state.cart}
                                     total={this.state.total}
                                     addCartQuantity={this.addCartQuantity}
+                                    decreaseCartQuantity={
+                                        this.decreaseCartQuantity
+                                    }
+                                    hideCart={this.hideCart}
                                 />
                             </>
                         }
@@ -115,6 +149,7 @@ class RouteSwitch extends Component {
                                     calculateTotalPrice={
                                         this.calculateTotalPrice
                                     }
+                                    showCart={this.showCart}
                                 />
                                 <ProductPage
                                     cart={this.state.cart}
@@ -124,6 +159,10 @@ class RouteSwitch extends Component {
                                     cart={this.state.cart}
                                     total={this.state.total}
                                     addCartQuantity={this.addCartQuantity}
+                                    decreaseCartQuantity={
+                                        this.decreaseCartQuantity
+                                    }
+                                    hideCart={this.hideCart}
                                 />
                             </>
                         }

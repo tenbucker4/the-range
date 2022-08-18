@@ -7,10 +7,10 @@ class Header extends Component {
         super(props);
     }
 
-    showCart = () => {
-        document.querySelector(".cart").style.display = "flex";
-        this.props.calculateTotalPrice();
-    };
+    // showCart = () => {
+    //     document.querySelector(".cart").style.display = "flex";
+    //     this.props.calculateTotalPrice();
+    // };
 
     render() {
         return (
@@ -35,7 +35,7 @@ class Header extends Component {
                             </svg>
                         </Link>
                     </li>
-                    <li onClick={this.showCart}>
+                    <li onClick={this.props.showCart}>
                         <svg
                             id="cart-icon"
                             xmlns="http://www.w3.org/2000/svg"
