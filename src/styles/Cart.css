@@ -4,26 +4,32 @@
 }
 
 .cart-backdrop {
-    width: 67%;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 9;
     position: fixed;
     top: 0;
-    left: -67vw;
-    -webkit-animation: slideRight 0.4s forwards;
-    animation: slideRight 0.4s forwards;
+    left: 0;
+    animation: 0.3s fadeIn;
+    -webkit-animation: 0.3s fadeIn;
 }
 
-@-webkit-keyframes slideRight {
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
     100% {
-        left: 0;
+        opacity: 100%;
     }
 }
 
-@keyframes slideRight {
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
     100% {
-        left: 0;
+        opacity: 100%;
     }
 }
 
