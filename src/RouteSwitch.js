@@ -13,7 +13,6 @@ class RouteSwitch extends Component {
         super(props);
 
         this.state = {
-            displayCart: false,
             cart: [],
             total: 0,
             displaySearch: false,

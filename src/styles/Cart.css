@@ -10,13 +10,39 @@
     z-index: 9;
     position: fixed;
     top: 0;
-    left: 0%;
+    left: -67vw;
+    -webkit-animation: slideRight 0.4s forwards;
+    animation: slideRight 0.4s forwards;
+}
+
+@-webkit-keyframes slideRight {
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideRight {
+    100% {
+        left: 0;
+    }
+}
+
+@-webkit-keyframes slideLeft {
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes slideLeft {
+    100% {
+        right: 0;
+    }
 }
 
 .cart-container {
     position: fixed;
     top: 0;
-    right: 0%;
+    right: -33vw;
     width: 33%;
     height: 100%;
     background-color: white;
@@ -29,6 +55,8 @@
     padding-top: 5rem;
     padding-bottom: 2rem;
     overflow-y: scroll;
+    -webkit-animation: slideLeft 0.4s forwards;
+    animation: slideLeft 0.4s forwards;
 }
 
 .close-cart {

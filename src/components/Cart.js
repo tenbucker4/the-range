@@ -13,7 +13,7 @@ const Cart = ({
     decreaseCartQuantity,
 }) => {
     return (
-        <div className="cart">
+        <div className="cart fade-in">
             <div className="cart-backdrop"></div>
             <div className="cart-container">
                 <img
