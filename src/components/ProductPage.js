@@ -25,12 +25,12 @@ const ProductPage = ({ addItemToCart }) => {
 
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
-        document.getElementById("search-icon").style.fill = "black";
+        document.querySelector(".cart-counter").style.color = "black";
         document.getElementById("cart-icon").style.fill = "black";
 
         return () => {
             document.querySelector(".app-title").style.color = "white";
-            document.getElementById("search-icon").style.fill = "white";
+            document.querySelector(".cart-counter").style.color = "white";
             document.getElementById("cart-icon").style.fill = "white";
         };
     });

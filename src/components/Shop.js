@@ -25,10 +25,12 @@ const Shop = (props) => {
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
         document.getElementById("cart-icon").style.fill = "black";
+        document.querySelector(".cart-counter").style.color = "black";
 
         return () => {
             document.querySelector(".app-title").style.color = "white";
             document.getElementById("cart-icon").style.fill = "white";
+            document.querySelector(".cart-counter").style.color = "white";
         };
     });
 

@@ -112,6 +112,7 @@ class RouteSwitch extends Component {
                                         this.calculateTotalPrice
                                     }
                                     showCart={this.showCart}
+                                    cart={this.state.cart}
                                 />
                                 <TitlePage />
                                 <Cart
@@ -135,6 +136,7 @@ class RouteSwitch extends Component {
                                         this.calculateTotalPrice
                                     }
                                     showCart={this.showCart}
+                                    cart={this.state.cart}
                                 />
                                 <Shop />
                                 <Cart
@@ -158,6 +160,7 @@ class RouteSwitch extends Component {
                                         this.calculateTotalPrice
                                     }
                                     showCart={this.showCart}
+                                    cart={this.state.cart}
                                 />
                                 <ProductPage
                                     cart={this.state.cart}

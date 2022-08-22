@@ -17,6 +17,9 @@ class Header extends Component {
                 </div>
                 <ul>
                     <li onClick={this.props.showCart}>
+                        <div className="cart-counter">
+                            {this.props.cart.length}
+                        </div>
                         <svg
                             id="cart-icon"
                             xmlns="http://www.w3.org/2000/svg"

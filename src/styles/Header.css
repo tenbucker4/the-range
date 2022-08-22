@@ -29,6 +29,17 @@ header ul {
     margin-left: auto;
 }
 
+header ul li {
+    position: relative;
+}
+
+.cart-counter {
+    font-size: 1rem;
+    position: absolute;
+    top: 0.3rem;
+    right: -1rem;
+}
+
 header ul li svg {
     width: 1.5rem;
     height: auto;
