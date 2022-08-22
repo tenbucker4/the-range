@@ -43,10 +43,25 @@
 .shop-nav ul li {
     list-style-type: none;
     cursor: pointer;
+    position: relative;
 }
 
-.shop-nav ul li:hover {
-    text-decoration: underline 1.5px solid black;
+.shop-nav ul li:after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0.4rem;
+    left: 0;
+    background-color: rgb(224, 224, 224);
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-in-out;
+}
+
+.shop-nav ul li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .search-bar {

@@ -38,8 +38,7 @@ const Shop = (props) => {
         <div className="shop-container">
             <div className="shop-wrapper">
                 <div className="shop-nav">
-                    <h5>SHOP //</h5>
-                    <h2>All Products</h2>
+                    <h2>SHOP //</h2>
                     <ul>
                         <li onClick={() => setSearch("")}>All Products</li>
                         {categories?.map((category) => {
