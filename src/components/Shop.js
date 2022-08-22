@@ -6,9 +6,14 @@ import "../styles/Shop.css";
 import "../styles/App.css";
 
 const Shop = (props) => {
-    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
     const { categoryId } = useParams();
     const category = categories.find((category) => category.id === categoryId);
+
+    const setSearch = (search) => {
+        setSearchQuery(`${search}`);
+        console.log({ searchQuery });
+    };
 
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
@@ -29,8 +34,16 @@ const Shop = (props) => {
                     <h5>SHOP //</h5>
                     <h2>All Products</h2>
                     <ul>
+                        <li onClick={() => setSearch("")}>All Products</li>
                         {categories?.map((category) => {
-                            return <li key={category.id}>{category.name}</li>;
+                            return (
+                                <li
+                                    onClick={() => setSearch(category.id)}
+                                    key={category.id}
+                                >
+                                    {category.name}
+                                </li>
+                            );
                         })}
                     </ul>
                 </div>
