@@ -14,14 +14,20 @@ const Shop = (props) => {
         await setSearchQuery(`${search}`);
     };
 
+    const checkSearchInput = (search) => {
+        if (search == "") {
+            setSearchQuery("product");
+        } else {
+            setSearchQuery(search);
+        }
+    };
+
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
-        document.getElementById("search-icon").style.fill = "black";
         document.getElementById("cart-icon").style.fill = "black";
 
         return () => {
             document.querySelector(".app-title").style.color = "white";
-            document.getElementById("search-icon").style.fill = "white";
             document.getElementById("cart-icon").style.fill = "white";
         };
     });
@@ -45,6 +51,12 @@ const Shop = (props) => {
                             );
                         })}
                     </ul>
+                    <input
+                        onChange={(e) => checkSearchInput(e.target.value)}
+                        className="search-bar"
+                        typeof="text"
+                        placeholder="Search"
+                    ></input>
                 </div>
                 <div className="shop-products">
                     {allProducts
@@ -69,28 +81,6 @@ const Shop = (props) => {
                                 </div>
                             </Link>
                         ))}
-                    {/* {allProducts?.map((item, i) => {
-                        return (
-                            <Link
-                                className="product"
-                                key={item.id}
-                                to={`/shop/catalog/${item.id}`}
-                                productid={item.id}
-                            >
-                                <div>
-                                    <div className="product-box">
-                                        <img
-                                            src={require(`../images/${item.image}`)}
-                                        ></img>
-                                    </div>
-                                    <div className="product-description">
-                                        <h3>{item.name}</h3>
-                                        <p>{`C$${item.price}`}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        );
-                    })} */}
                 </div>
             </div>
         </div>

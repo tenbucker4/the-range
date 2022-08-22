@@ -37,6 +37,7 @@
 .shop-nav ul {
     line-height: 2.5rem;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .shop-nav ul li {
@@ -46,6 +47,18 @@
 
 .shop-nav ul li:hover {
     text-decoration: underline 1.5px solid black;
+}
+
+.search-bar {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.search-bar:focus {
+    outline: none;
 }
 
 .shop-products {
