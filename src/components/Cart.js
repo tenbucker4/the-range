@@ -11,6 +11,7 @@ const Cart = ({
     total,
     addCartQuantity,
     decreaseCartQuantity,
+    clearCart,
 }) => {
     return (
         <div className="cart fade-in">
@@ -62,7 +63,11 @@ const Cart = ({
                 {cart.length == 0 && <p>Your cart is empty</p>}
                 <div className="total">{`Subtotal: C$${total}`}</div>
 
-                <button>Checkout</button>
+                <Link to="/">
+                    <button className="checkout" onClick={clearCart}>
+                        Checkout
+                    </button>
+                </Link>
             </div>
         </div>
     );

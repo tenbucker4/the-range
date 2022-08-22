@@ -29,6 +29,13 @@ class RouteSwitch extends Component {
         document.querySelector(".cart").style.display = "none";
     };
 
+    clearCart = () => {
+        this.setState((prevState) => ({
+            ...prevState,
+            cart: [],
+        }));
+    };
+
     addItemToCart = async (name, image, price, quantity) => {
         const id = uniqid();
         await this.setState((prevState) => ({
@@ -123,6 +130,7 @@ class RouteSwitch extends Component {
                                         this.decreaseCartQuantity
                                     }
                                     hideCart={this.hideCart}
+                                    clearCart={this.clearCart}
                                 />
                             </>
                         }
@@ -147,6 +155,7 @@ class RouteSwitch extends Component {
                                         this.decreaseCartQuantity
                                     }
                                     hideCart={this.hideCart}
+                                    clearCart={this.clearCart}
                                 />
                             </>
                         }
@@ -174,6 +183,7 @@ class RouteSwitch extends Component {
                                         this.decreaseCartQuantity
                                     }
                                     hideCart={this.hideCart}
+                                    clearCart={this.clearCart}
                                 />
                             </>
                         }
