@@ -6,13 +6,12 @@ import "../styles/Shop.css";
 import "../styles/App.css";
 
 const Shop = (props) => {
-    const [searchQuery, setSearchQuery] = useState("");
+    const [searchQuery, setSearchQuery] = useState("product");
     const { categoryId } = useParams();
     const category = categories.find((category) => category.id === categoryId);
 
-    const setSearch = (search) => {
-        setSearchQuery(`${search}`);
-        console.log({ searchQuery });
+    const setSearch = async (search) => {
+        await setSearchQuery(`${search}`);
     };
 
     useEffect(() => {
@@ -48,7 +47,29 @@ const Shop = (props) => {
                     </ul>
                 </div>
                 <div className="shop-products">
-                    {allProducts?.map((item, i) => {
+                    {allProducts
+                        .filter((item) => item.id.includes(`${searchQuery}`))
+                        .map((filteredProduct) => (
+                            <Link
+                                className="product"
+                                key={filteredProduct.id}
+                                to={`/shop/catalog/${filteredProduct.id}`}
+                                productid={filteredProduct.id}
+                            >
+                                <div>
+                                    <div className="product-box">
+                                        <img
+                                            src={require(`../images/${filteredProduct.image}`)}
+                                        ></img>
+                                    </div>
+                                    <div className="product-description">
+                                        <h3>{filteredProduct.name}</h3>
+                                        <p>{`C$${filteredProduct.price}`}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    {/* {allProducts?.map((item, i) => {
                         return (
                             <Link
                                 className="product"
@@ -69,7 +90,7 @@ const Shop = (props) => {
                                 </div>
                             </Link>
                         );
-                    })}
+                    })} */}
                 </div>
             </div>
         </div>
