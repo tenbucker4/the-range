@@ -37,6 +37,25 @@ class RouteSwitch extends Component {
     };
 
     addItemToCart = async (name, image, price, quantity) => {
+        for (let i = 0; i < this.state.cart.length; i++) {
+            if (this.state.cart[i].name == name) {
+                this.setState(({ cart }) => ({
+                    cart: [
+                        ...cart.slice(0, i),
+                        {
+                            ...cart[i],
+                            quantity:
+                                parseInt(this.state.cart[i].quantity) +
+                                parseInt(quantity),
+                        },
+                        ...cart.slice(i + 1),
+                    ],
+                }));
+                this.showCart();
+                return;
+            }
+        }
+
         const id = uniqid();
         await this.setState((prevState) => ({
             ...prevState,
