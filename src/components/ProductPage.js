@@ -77,6 +77,33 @@ const ProductPage = ({ addItemToCart }) => {
                     </button>
                 </div>
             </div>
+            <div className="related-products">
+                <h4>Browse Other Products</h4>
+                <div className="slider-container">
+                    <div className="handle-left"></div>
+                    <div className="slider">
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                        </div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                        <div className="box"></div>
+                    </div>
+                    <div className="handle-right"></div>
+                </div>
+                <div className="progress-bar">
+                    <div className="progress-blip active" id="blip-1"></div>
+                    <div className="progress-blip" id="blip-2"></div>
+                    <div className="progress-blip" id="blip-3"></div>
+                </div>
+            </div>
         </div>
     );
 };

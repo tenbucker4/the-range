@@ -1,5 +1,7 @@
 .product-page-container {
     display: flex;
+    flex-direction: column;
+    gap: 4rem;
     justify-content: center;
     min-height: 100vh;
     background-color: var(--shop-background);
@@ -10,7 +12,6 @@
 }
 
 .product-page-wrapper {
-    padding-top: 14rem;
     display: flex;
     width: 100%;
     padding-left: 6rem;
@@ -76,4 +77,17 @@
 .add-to-cart-bin button:hover {
     background-color: black;
     color: white;
+}
+
+.related-products {
+    padding-left: 6rem;
+    padding-right: 12rem;
+}
+
+.slider-container {
+    width: 75%;
+}
+
+.box img {
+    max-width: calc(100% / 3);
 }
