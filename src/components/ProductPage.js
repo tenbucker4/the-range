@@ -113,60 +113,21 @@ const ProductPage = ({ addItemToCart }) => {
                         <img src={require("../images/chevron-left.png")}></img>
                     </div>
                     <div className="slider">
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
-                        <div className="box">
-                            <img
-                                src={require(`../images/${product.image}`)}
-                            ></img>
-                            <p>{product.name}</p>
-                        </div>
+                        {allProducts
+                            .filter((item) => item.name !== product.name)
+                            .map((otherProducts) => (
+                                <Link
+                                    className="box"
+                                    key={otherProducts.id}
+                                    to={`/shop/catalog/${otherProducts.id}`}
+                                    productid={otherProducts.id}
+                                >
+                                    <img
+                                        src={require(`../images/${otherProducts.image}`)}
+                                    ></img>
+                                    <p>{otherProducts.name}</p>
+                                </Link>
+                            ))}
                     </div>
                     <div
                         className="handle handle-right"

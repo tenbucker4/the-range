@@ -1,9 +1,9 @@
 .product-page-container {
-    padding-top: 4rem;
+    padding-top: 12rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     background-color: var(--shop-background);
     position: absolute;

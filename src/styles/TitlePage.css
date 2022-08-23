@@ -4,8 +4,7 @@
     align-items: flex-start;
     gap: 1.5rem;
     color: white;
-    padding-top: 25vh;
-    padding-left: 8rem;
+    padding: 25vh 0 20vh 8rem;
 }
 
 .title-div h3,
