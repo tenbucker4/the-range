@@ -23,6 +23,32 @@ const ProductPage = ({ addItemToCart }) => {
         }
     };
 
+    const moveSliderLeft = () => {
+        const slider = document.querySelector(".slider");
+        const sliderIndex = parseInt(
+            getComputedStyle(slider).getPropertyValue("--slider-index")
+        );
+
+        if (sliderIndex <= 0) {
+            slider.style.setProperty("--slider-index", 2);
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex - 1);
+        }
+    };
+
+    const moveSliderRight = () => {
+        const slider = document.querySelector(".slider");
+        const sliderIndex = parseInt(
+            getComputedStyle(slider).getPropertyValue("--slider-index")
+        );
+
+        if (sliderIndex >= 2) {
+            slider.style.setProperty("--slider-index", 0);
+        } else {
+            slider.style.setProperty("--slider-index", sliderIndex + 1);
+        }
+    };
+
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
         document.querySelector(".cart-counter").style.color = "black";
@@ -80,28 +106,74 @@ const ProductPage = ({ addItemToCart }) => {
             <div className="related-products">
                 <h4>Browse Other Products</h4>
                 <div className="slider-container">
-                    <div className="handle-left"></div>
+                    <div
+                        className="handle handle-left"
+                        onClick={moveSliderLeft}
+                    >
+                        <img src={require("../images/chevron-left.png")}></img>
+                    </div>
                     <div className="slider">
                         <div className="box">
                             <img
                                 src={require(`../images/${product.image}`)}
                             ></img>
+                            <p>{product.name}</p>
                         </div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
-                        <div className="box"></div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
+                        <div className="box">
+                            <img
+                                src={require(`../images/${product.image}`)}
+                            ></img>
+                            <p>{product.name}</p>
+                        </div>
                     </div>
-                    <div className="handle-right"></div>
-                </div>
-                <div className="progress-bar">
-                    <div className="progress-blip active" id="blip-1"></div>
-                    <div className="progress-blip" id="blip-2"></div>
-                    <div className="progress-blip" id="blip-3"></div>
+                    <div
+                        className="handle handle-right"
+                        onClick={moveSliderRight}
+                    >
+                        <img src={require("../images/chevron-right.png")}></img>
+                    </div>
                 </div>
             </div>
         </div>
