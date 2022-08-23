@@ -1,16 +1,32 @@
 .title-div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
     color: white;
     padding-top: 25vh;
+    padding-left: 8rem;
 }
 
 .title-div h3,
 .title-div h1 {
     font-weight: 200;
     margin: 0;
+}
+
+.title-div button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.75rem 2rem;
+    position: relative;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+.title-div button:hover {
+    background-color: white;
+    color: black;
 }
 
 @media (max-width: 750px) {
