@@ -40,7 +40,9 @@ const Shop = (props) => {
                 <div className="shop-nav">
                     <h2>SHOP //</h2>
                     <ul>
-                        <li onClick={() => setSearch("")}>All Products</li>
+                        <li onClick={(e) => setSearch("", e.target)}>
+                            All Products
+                        </li>
                         {categories?.map((category) => {
                             return (
                                 <li

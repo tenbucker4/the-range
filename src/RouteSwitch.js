@@ -15,8 +15,6 @@ class RouteSwitch extends Component {
         this.state = {
             cart: [],
             total: 0,
-            displaySearch: false,
-            searchFor: "",
         };
     }
 
