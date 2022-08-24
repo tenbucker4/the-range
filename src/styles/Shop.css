@@ -119,9 +119,6 @@
     padding-top: 0.5rem;
 }
 
-@media (max-width: 750px) {
-}
-
 @media (max-width: 690px) {
     .shop-wrapper {
         flex-direction: column;

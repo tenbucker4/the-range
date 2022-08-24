@@ -130,3 +130,36 @@
     color: white;
     background-color: black;
 }
+
+@media (max-width: 880px) {
+    .cart-title {
+        font-size: 1.2rem;
+    }
+
+    .cart-item-details {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .cart-backdrop {
+        background-color: transparent;
+    }
+
+    .cart-container {
+        width: 100%;
+        right: -100vw;
+    }
+
+    @-webkit-keyframes slideLeft {
+        100% {
+            right: 0;
+        }
+    }
+
+    @keyframes slideLeft {
+        100% {
+            right: 0;
+        }
+    }
+}
