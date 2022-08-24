@@ -1,3 +1,7 @@
+:root {
+    --handle-width: 3rem;
+}
+
 .product-page-container {
     padding-top: 12rem;
     display: flex;
@@ -14,8 +18,9 @@
 .product-page-wrapper {
     display: flex;
     width: 100%;
-    padding-left: 6rem;
-    padding-right: 12rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -39,7 +44,7 @@
 
 .product-page-box img {
     width: 85%;
-    max-width: 600px;
+    max-width: 450px;
     height: auto;
 }
 
@@ -80,37 +85,43 @@
 }
 
 .related-products {
-    padding-left: 6rem;
-    padding-right: 12rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 2rem;
+    overflow: hidden;
 }
 
 .related-products h4 {
-    padding-bottom: 2rem;
+    padding-left: 10vw;
+    padding-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .slider-container {
-    width: 100%;
+    width: 60%;
     display: flex;
-    overflow: hidden;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slider {
     --slider-index: 0;
     display: flex;
     flex-grow: 1;
+    width: calc(100% - (2 * var(--handle-width)));
     transform: translateX(calc(var(--slider-index) * -100%));
     transition: transform 500ms ease-in-out;
 }
 
-.handle-left,
-.handle-right {
+.handle {
     display: flex;
     align-items: center;
     background-color: white;
     justify-content: center;
-    width: 4rem;
+    width: var(--handle-width);
     z-index: 5;
     cursor: pointer;
     position: relative;
@@ -118,12 +129,12 @@
 
 .handle-left:hover,
 .handle-right:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(225, 222, 222);
 }
 
-.box {
+.slider > .box {
     max-width: calc(100% / 3);
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     flex: 0 0 calc(100% / 3);
     background-color: transparent;
     border: none;
@@ -134,14 +145,68 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    z-index: 1;
 }
 
 .box p {
     font-size: 0.8rem;
+    text-align: center;
 }
 
 .box img {
-    width: 50%;
-    height: auto;
+    width: 60%;
+    max-width: 200px;
+}
+
+@media (max-width: 810px) {
+    .product-page-container {
+        padding-top: 14rem;
+    }
+
+    .slider-container {
+        width: 70%;
+    }
+
+    .box p {
+        font-size: 0.6rem;
+    }
+
+    .product-page-description {
+        width: 20%;
+        font-size: 1rem;
+    }
+    .product-page-box {
+        padding-top: 2rem;
+    }
+
+    .add-to-cart-bin {
+        padding-top: 1rem;
+    }
+
+    .add-to-cart-bin .price {
+        font-size: 1rem;
+    }
+
+    .quantity-bin {
+        font-size: 1rem;
+    }
+
+    .quantity-bin img {
+        cursor: pointer;
+        width: 1.5rem;
+    }
+
+    .add-to-cart-bin button {
+        font-size: 0.5rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .box p {
+        font-size: 0.45rem;
+        word-wrap: break-word;
+    }
+    .box {
+        aspect-ratio: 1 / 2;
+    }
 }
