@@ -67,7 +67,7 @@
 .search-bar {
     border: 1px solid black;
     border-radius: none;
-    height: 1.5rem;
+    height: 2rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     width: 75%;
@@ -117,4 +117,41 @@
 
 .product-description p {
     padding-top: 0.5rem;
+}
+
+@media (max-width: 750px) {
+}
+
+@media (max-width: 690px) {
+    .shop-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .shop-nav {
+        width: 100%;
+    }
+
+    .shop-nav ul {
+        line-height: 2rem;
+    }
+
+    .shop-nav ul li:after {
+        width: 100%;
+        bottom: 0.2rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .shop-products {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .product-description {
+        font-size: 0.8rem;
+    }
 }
