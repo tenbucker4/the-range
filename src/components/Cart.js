@@ -67,7 +67,7 @@ const Cart = ({
                 {cart.length == 0 && <p>Your cart is empty</p>}
                 <div className="total">{`Subtotal: C$${total}`}</div>
 
-                <Link to="/">
+                <Link to="/the-range/">
                     <button className="checkout" onClick={clearCart}>
                         Checkout
                     </button>

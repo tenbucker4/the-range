@@ -70,7 +70,7 @@ const Shop = (props) => {
                             <Link
                                 className="product"
                                 key={filteredProduct.id}
-                                to={`/shop/catalog/${filteredProduct.id}`}
+                                to={`/the-range/shop/catalog/${filteredProduct.id}`}
                                 productid={filteredProduct.id}
                             >
                                 <div>

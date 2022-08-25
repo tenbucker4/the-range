@@ -134,7 +134,7 @@ class RouteSwitch extends Component {
                 <Routes>
                     <Route
                         exact
-                        path="/"
+                        path="/the-range"
                         element={
                             <>
                                 <App />
@@ -160,7 +160,7 @@ class RouteSwitch extends Component {
                         }
                     />
                     <Route
-                        path="/shop/catalog"
+                        path="/the-range/shop/catalog"
                         element={
                             <>
                                 <Header
@@ -185,7 +185,7 @@ class RouteSwitch extends Component {
                         }
                     />
                     <Route
-                        path="/shop/catalog/:productId"
+                        path="/the-range/shop/catalog/:productId"
                         element={
                             <>
                                 <Header

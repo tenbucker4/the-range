@@ -65,7 +65,7 @@ const ProductPage = ({ addItemToCart }) => {
         <div className="product-page-container">
             <div className="product-page-wrapper">
                 <div className="product-page-description">
-                    <Link to="/shop/catalog">
+                    <Link to="/the-range/shop/catalog">
                         <img
                             src={require("../images/arrow-left.png")}
                             alt="return-to-catalog"
@@ -128,7 +128,7 @@ const ProductPage = ({ addItemToCart }) => {
                                 <Link
                                     className="box"
                                     key={otherProducts.id}
-                                    to={`/shop/catalog/${otherProducts.id}`}
+                                    to={`/the-range/shop/catalog/${otherProducts.id}`}
                                     productid={otherProducts.id}
                                 >
                                     <img

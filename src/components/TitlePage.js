@@ -12,7 +12,7 @@ class TitlePage extends Component {
             <div className="title-div">
                 <h1>Welcome to The Range</h1>
                 <div>Home of premium golf equipment</div>
-                <Link to="/shop/catalog">
+                <Link to="/the-range/shop/catalog">
                     <button type="button">ENTER</button>
                 </Link>
             </div>
