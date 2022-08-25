@@ -23,6 +23,8 @@ const Cart = ({
                     src={require("../images/close.png")}
                 ></img>
                 <h2 className="cart-title">Your Shopping Cart</h2>
+
+                {/* Return a shopping cart item for each entry in the cart array in state */}
                 {cart.length > 0 &&
                     cart?.map((item, i) => {
                         return (
@@ -60,6 +62,8 @@ const Cart = ({
                             </div>
                         );
                     })}
+
+                {/* Display if cart is empty and subtotal */}
                 {cart.length == 0 && <p>Your cart is empty</p>}
                 <div className="total">{`Subtotal: C$${total}`}</div>
 

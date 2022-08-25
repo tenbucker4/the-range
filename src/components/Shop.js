@@ -10,6 +10,7 @@ const Shop = (props) => {
     const { categoryId } = useParams();
     const category = categories.find((category) => category.id === categoryId);
 
+    // Set search in state
     const setSearch = async (search) => {
         await setSearchQuery(`${search}`);
     };
@@ -22,6 +23,7 @@ const Shop = (props) => {
         }
     };
 
+    // Change header color when Shop is mounted/unmounted
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
         document.getElementById("cart-icon").style.fill = "black";

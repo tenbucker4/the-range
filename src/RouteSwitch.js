@@ -18,15 +18,18 @@ class RouteSwitch extends Component {
         };
     }
 
+    // Display cart
     showCart = () => {
         document.querySelector(".cart").style.display = "flex";
         this.calculateTotalPrice();
     };
 
+    // Hide cart
     hideCart = () => {
         document.querySelector(".cart").style.display = "none";
     };
 
+    // Clear cart contents
     clearCart = () => {
         this.setState((prevState) => ({
             ...prevState,
@@ -34,6 +37,7 @@ class RouteSwitch extends Component {
         }));
     };
 
+    // Add item to cart. Check if item already in cart
     addItemToCart = async (name, image, price, quantity) => {
         for (let i = 0; i < this.state.cart.length; i++) {
             if (this.state.cart[i].name == name) {
@@ -73,6 +77,7 @@ class RouteSwitch extends Component {
         document.querySelector(".cart").style.display = "flex";
     };
 
+    // Sum total cost in cart
     calculateTotalPrice = async () => {
         let totalPrice = 0;
         await this.state.cart.forEach((item) => {
@@ -82,6 +87,7 @@ class RouteSwitch extends Component {
         await this.setState({ total: totalPrice.toFixed(2) });
     };
 
+    // Add 1 to quantity of cart item
     addCartQuantity = async (i) => {
         await this.setState(({ cart }) => ({
             cart: [
@@ -97,6 +103,7 @@ class RouteSwitch extends Component {
         await this.calculateTotalPrice();
     };
 
+    // Subtract 1 from quantity of cart item
     decreaseCartQuantity = async (i, itemQuantity, itemId) => {
         if (itemQuantity == 1) {
             await this.setState({

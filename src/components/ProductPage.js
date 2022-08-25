@@ -11,6 +11,7 @@ const ProductPage = ({ addItemToCart }) => {
     const [count, setCount] = useState(["1"]);
     const product = allProducts.find((product) => product.id === productId);
 
+    // Quantity counter for adding item to cart
     const countUp = () => {
         setCount(parseInt(count) + parseInt(1));
     };
@@ -23,6 +24,7 @@ const ProductPage = ({ addItemToCart }) => {
         }
     };
 
+    // Move image slider
     const moveSliderLeft = () => {
         const slider = document.querySelector(".slider");
         const sliderIndex = parseInt(
@@ -49,6 +51,7 @@ const ProductPage = ({ addItemToCart }) => {
         }
     };
 
+    // Change header color on mount/unmount
     useEffect(() => {
         document.querySelector(".app-title").style.color = "black";
         document.querySelector(".cart-counter").style.color = "black";
