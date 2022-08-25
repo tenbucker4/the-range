@@ -130,7 +130,7 @@ class RouteSwitch extends Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Routes>
                     <Route
                         exact
