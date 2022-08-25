@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import allProducts from "../products/allProducts";
-
-import categories from "../products/categories";
 import "../styles/ProductPage.css";
-import uniqid from "uniqid";
 
 const ProductPage = ({ addItemToCart }) => {
     const { productId } = useParams();
@@ -69,7 +66,10 @@ const ProductPage = ({ addItemToCart }) => {
             <div className="product-page-wrapper">
                 <div className="product-page-description">
                     <Link to="/shop/catalog">
-                        <img src={require("../images/arrow-left.png")}></img>
+                        <img
+                            src={require("../images/arrow-left.png")}
+                            alt="return-to-catalog"
+                        ></img>
                     </Link>
                     <div className="prod-name">{product.name}</div>
                 </div>
@@ -77,6 +77,7 @@ const ProductPage = ({ addItemToCart }) => {
                     <img
                         className="prod-image"
                         src={require(`../images/${product.image}`)}
+                        alt={product.name}
                     ></img>
                 </div>
                 <div className="add-to-cart-bin">
@@ -85,11 +86,13 @@ const ProductPage = ({ addItemToCart }) => {
                         <img
                             src={require("../images/minus.png")}
                             onClick={countDown}
+                            alt="subtract-quantity"
                         ></img>
                         <div className="quantity-counter">{count}</div>
                         <img
                             src={require("../images/plus.png")}
                             onClick={countUp}
+                            alt="add-quantity"
                         ></img>
                     </div>
                     <button
@@ -113,7 +116,10 @@ const ProductPage = ({ addItemToCart }) => {
                         className="handle handle-left"
                         onClick={moveSliderLeft}
                     >
-                        <img src={require("../images/chevron-left.png")}></img>
+                        <img
+                            src={require("../images/chevron-left.png")}
+                            alt="move-slider-left"
+                        ></img>
                     </div>
                     <div className="slider">
                         {allProducts
@@ -127,6 +133,7 @@ const ProductPage = ({ addItemToCart }) => {
                                 >
                                     <img
                                         src={require(`../images/${otherProducts.image}`)}
+                                        alt={otherProducts.name}
                                     ></img>
                                     <p>{otherProducts.name}</p>
                                 </Link>
@@ -136,7 +143,10 @@ const ProductPage = ({ addItemToCart }) => {
                         className="handle handle-right"
                         onClick={moveSliderRight}
                     >
-                        <img src={require("../images/chevron-right.png")}></img>
+                        <img
+                            src={require("../images/chevron-right.png")}
+                            alt="move-slider-right"
+                        ></img>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import React, { Component, useState } from "react";
+import { Component } from "react";
 import "./styles/Header.css";
 
 class App extends Component {

@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
-import allProducts from "../products/allProducts";
-import categories from "../products/categories";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Cart.css";
-import RouteSwitch from "../RouteSwitch";
 
 const Cart = ({
     cart,
@@ -32,6 +29,7 @@ const Cart = ({
                                 <div className="cart-item-image">
                                     <img
                                         src={require(`../images/${item.image}`)}
+                                        alt={item.name}
                                     ></img>
                                 </div>
                                 <div className="cart-item-details">
@@ -42,6 +40,7 @@ const Cart = ({
                                     <div className="cart-quantity-bin">
                                         <img
                                             src={require("../images/minus.png")}
+                                            alt="subtract-quantity"
                                             onClick={() =>
                                                 decreaseCartQuantity(
                                                     i,
@@ -56,6 +55,7 @@ const Cart = ({
                                         <img
                                             onClick={() => addCartQuantity(i)}
                                             src={require("../images/plus.png")}
+                                            alt="add-quantity"
                                         ></img>
                                     </div>
                                 </div>

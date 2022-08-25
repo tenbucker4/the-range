@@ -5,7 +5,7 @@ import Shop from "./components/Shop";
 import Header from "./components/Header";
 import ProductPage from "./components/ProductPage";
 import Cart from "./components/Cart";
-import { Component, useState } from "react";
+import { Component } from "react";
 import uniqid from "uniqid";
 
 class RouteSwitch extends Component {
