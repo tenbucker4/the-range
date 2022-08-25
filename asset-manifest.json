@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/github.com/tenbucker4/the-range/static/css/main.b634c9e1.css",
+    "main.js": "/github.com/tenbucker4/the-range/static/js/main.0a0b3405.js",
+    "static/media/will-porada-unsplash.jpg": "/github.com/tenbucker4/the-range/static/media/will-porada-unsplash.8cc919f6486010f3f9d4.jpg",
+    "static/media/taylormade-driver-2.png": "/github.com/tenbucker4/the-range/static/media/taylormade-driver-2.7f2e29300f57f5bf4696.png",
+    "static/media/callaway-irons-1.png": "/github.com/tenbucker4/the-range/static/media/callaway-irons-1.26654e115080640f162a.png",
+    "static/media/titleist-irons.png": "/github.com/tenbucker4/the-range/static/media/titleist-irons.30a150919d31748820cd.png",
+    "static/media/taylormade-driver-1.png": "/github.com/tenbucker4/the-range/static/media/taylormade-driver-1.cd744b51fd74e9d78097.png",
+    "static/media/taylormade-m2-driver.png": "/github.com/tenbucker4/the-range/static/media/taylormade-m2-driver.efad9c68e407d8ffe9f3.png",
+    "static/media/titleist-balls-1.png": "/github.com/tenbucker4/the-range/static/media/titleist-balls-1.5dc2f8602af2de4f1152.png",
+    "static/media/nike-glove.png": "/github.com/tenbucker4/the-range/static/media/nike-glove.eaa92c3d3c0a99aec14c.png",
+    "static/media/callaway-wedges-1.png": "/github.com/tenbucker4/the-range/static/media/callaway-wedges-1.50bf1e40a85a0207d61a.png",
+    "static/media/callaway-balls.png": "/github.com/tenbucker4/the-range/static/media/callaway-balls.e58970525d322e9e6e2e.png",
+    "static/media/glove-1.png": "/github.com/tenbucker4/the-range/static/media/glove-1.17be9ed271c9a9bb2d1e.png",
+    "static/media/taylormade-wood-1.png": "/github.com/tenbucker4/the-range/static/media/taylormade-wood-1.4c9b366e38193ffba68c.png",
+    "index.html": "/github.com/tenbucker4/the-range/index.html",
+    "main.b634c9e1.css.map": "/github.com/tenbucker4/the-range/static/css/main.b634c9e1.css.map",
+    "main.0a0b3405.js.map": "/github.com/tenbucker4/the-range/static/js/main.0a0b3405.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b634c9e1.css",
+    "static/js/main.0a0b3405.js"
+  ]
+}
