@@ -13,7 +13,7 @@ class TitlePage extends Component {
                 <h1>Welcome to The Range</h1>
                 <div>Home of premium golf equipment</div>
                 <Link to="/the-range/shop/catalog">
-                    <button type="button">ENTER</button>
+                    <button type="button">Tee-Off</button>
                 </Link>
             </div>
         );
