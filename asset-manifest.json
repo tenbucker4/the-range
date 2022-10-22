@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/the-range/static/css/main.e1ad2089.css",
-    "main.js": "/the-range/static/js/main.b25ed328.js",
+    "main.css": "/the-range/static/css/main.aa6f3ec7.css",
+    "main.js": "/the-range/static/js/main.9060e128.js",
     "static/media/will-porada-unsplash.jpg": "/the-range/static/media/will-porada-unsplash.8cc919f6486010f3f9d4.jpg",
     "static/media/taylormade-driver-2.png": "/the-range/static/media/taylormade-driver-2.7f2e29300f57f5bf4696.png",
     "static/media/callaway-irons-1.png": "/the-range/static/media/callaway-irons-1.26654e115080640f162a.png",
@@ -15,11 +15,11 @@
     "static/media/glove-1.png": "/the-range/static/media/glove-1.17be9ed271c9a9bb2d1e.png",
     "static/media/taylormade-wood-1.png": "/the-range/static/media/taylormade-wood-1.4c9b366e38193ffba68c.png",
     "index.html": "/the-range/index.html",
-    "main.e1ad2089.css.map": "/the-range/static/css/main.e1ad2089.css.map",
-    "main.b25ed328.js.map": "/the-range/static/js/main.b25ed328.js.map"
+    "main.aa6f3ec7.css.map": "/the-range/static/css/main.aa6f3ec7.css.map",
+    "main.9060e128.js.map": "/the-range/static/js/main.9060e128.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1ad2089.css",
-    "static/js/main.b25ed328.js"
+    "static/css/main.aa6f3ec7.css",
+    "static/js/main.9060e128.js"
   ]
 }
