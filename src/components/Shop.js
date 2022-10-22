@@ -12,7 +12,7 @@ const Shop = (props) => {
 
     // Set search in state
     const setSearch = async (search) => {
-        await setSearchQuery(`${search}`);
+        setSearchQuery(`${search}`);
     };
 
     const checkSearchInput = (search) => {
