@@ -5,45 +5,35 @@
 }
 
 header {
-    display: flex;
     position: relative;
     z-index: 5;
-}
-
-header .app-title {
+    height: 100px;
     display: flex;
     align-items: center;
+    padding: 0 4rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-container .app-title {
     letter-spacing: 4px;
-    padding-left: 6rem;
-    padding-top: 5rem;
     font-size: 1.2rem;
 }
 
-header ul {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    gap: 6rem;
-    padding-top: 5rem;
-    padding-right: 8rem;
-    margin-left: auto;
-}
-
-header ul li {
+.cart-icon {
     position: relative;
 }
 
-.cart-counter {
-    font-size: 1rem;
-    position: absolute;
-    top: 0.3rem;
-    right: -1rem;
-}
-
-header ul li svg {
-    width: 1.5rem;
-    height: auto;
+.cart-icon-pair {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 @media (max-width: 750px) {
