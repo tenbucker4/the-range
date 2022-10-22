@@ -10,8 +10,11 @@ class TitlePage extends Component {
     render() {
         return (
             <div className="title-div">
-                <h1>Welcome to The Range</h1>
-                <div>Home of premium golf equipment</div>
+                <p>WELCOME TO</p>
+                <h1>The Range</h1>
+                <div className="hero-slogan">
+                    Home of premium golf equipment
+                </div>
                 <Link to="/the-range/shop/catalog">
                     <button type="button">Tee-Off</button>
                 </Link>

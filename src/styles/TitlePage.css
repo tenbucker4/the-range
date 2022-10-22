@@ -1,20 +1,39 @@
 .title-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
     color: white;
-    padding: 25vh 0 20vh 8rem;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 4rem;
 }
 
-.title-div h3,
+.title-div p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 .title-div h1 {
-    font-weight: 200;
-    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.title-div h1 {
+    font-size: 4rem;
+}
+
+.hero-slogan {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 1.75rem;
 }
 
 .title-div button {
     background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
     color: white;
     border: 1px solid white;
     padding: 0.75rem 2rem;
@@ -28,23 +47,34 @@
     color: black;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 775px) {
     .title-div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding-left: 0;
+        padding-left: 2rem;
+    }
+
+    .title-div p {
+        font-size: 0.8rem;
+    }
+
+    .title-div h1 {
+        font-size: 3rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 550px) {
     .title-div h1 {
-        font-size: 1.2rem;
+        font-size: 2.5rem;
     }
-    .title-div h3 {
+
+    .hero-slogan {
         font-size: 1rem;
-        text-align: center;
+    }
+    .title-div p {
+        font-size: 0.7rem;
     }
     .title-div button {
         padding: 0.5rem 1.5rem;
